@@ -164,27 +164,17 @@ h5 {
     =========================
         Nav Bar
     ========================= */
-#navbar {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#navbar a {
+.navbar a {
   text-decoration: none;
   color: gray;
 }
 
-#navbar a:hover {
-  border: 1px solid black;
-  padding: 5px;
-}
-
-#nav-logo a:hover {
-  animation-name: none;
-  border: none;
-  padding: 0px;
-}
 .sticky {
   position: fixed;
   padding-top: 55px;
@@ -230,7 +220,7 @@ button {
 
 button:hover {
   border: 1px solid black;
-  background-color: white;
+  background-color: rgb(252, 2, 2);
   padding: 5px 40px;
   font-size: 18px;
 }
@@ -306,7 +296,7 @@ address {
     ========================= */
 
 @media (max-width: 800px) {
-    #navbar a {
+    .navbar a {
         order: 1;
         margin: 20px;
     }
@@ -325,4 +315,48 @@ address {
   .hero-img {
       display: none;
   }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-logo {
+        left: 35%;
+    }
+
+    .navbar a {
+        border-top: 1px solid gray;
+        padding: 15px 100% 10px 100%;
+        margin: 10px 0px 0px 0px;
+    }
+
+    #contact-link {
+        border-bottom: 1px solid gray;
+        padding-bottom: 5%;
+    }
+
+    .top-content {
+        flex-direction: column;
+        margin: 5% 0px;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+        margin: 10% 0px;
+    }
+
+    .about {
+        margin-top: 5%;
+    }
+
+    .product {
+        margin-top: 5%;
+    }
+
+    .vision {
+        margin-top: 5%;
+    }
 }
